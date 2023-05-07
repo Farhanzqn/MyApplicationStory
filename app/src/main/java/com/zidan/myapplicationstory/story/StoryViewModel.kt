@@ -38,5 +38,4 @@ class StoryViewModel @Inject constructor(private val storyRepository: StoryRepos
     ) {
         storyRepository.uploadImage(token, description, imgFile,location)
     }
-
-}
+    }

@@ -8,6 +8,8 @@
     <string name="confirm_password">Confirm your password</string>
     <string name="password_min">Password minimum 8 character</string>
 
+    <string name="published_date"> Terkirim Pada </string>
+
     <string name="email">Masukkan Email Yuk!</string>
     <string name="language">Language</string>
     <string name="logout">Log Out</string>
@@ -17,7 +19,7 @@
     <string name="register">Daftar Yuk!</string>
     <string name="password_dont_match_alert">Password tidak cocok</string>
     <string name="name_alert">Nama minimal 2 karakter</string>
-    <string name="password_alert">PasswordPassword must have more 6 character</string>
+    <string name="password_alert">PasswordPassword must have more 8 character</string>
     <string name="confirmation">Konfirmasi</string>
     <string name="invalid">Data yang dimasukkan tidak valid</string>
     <string name="confirmation_desc">Apakah kamu ingin keluar?</string>

@@ -28,6 +28,7 @@ class DetailStoryActivity : AppCompatActivity() {
                 .into(binding.storyPhoto)
             binding.nameAccount.text = story.name
             binding.tvDescription.text = story.description
+            binding.tvItemPublishedDate.text = story.createdAt
         }
     }
 }

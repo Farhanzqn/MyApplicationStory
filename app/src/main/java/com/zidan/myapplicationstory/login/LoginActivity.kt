@@ -49,7 +49,7 @@ class LoginActivity : AppCompatActivity() {
     }
     private fun setupAction() {
         binding.apply {
-            btnSignIn.setOnClickListener {
+            btnLogin.setOnClickListener {
                 userLogin()
             }
             tvSignUp.setOnClickListener {
@@ -65,7 +65,7 @@ class LoginActivity : AppCompatActivity() {
         }
 
         binding.apply {
-            btnSignIn.isEnabled = !isLoading
+            btnLogin.isEnabled = !isLoading
             tvSignUp.isEnabled = !isLoading
             emailAccount.isEnabled = !isLoading
             passwordAccount.isEnabled = !isLoading

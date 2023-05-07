@@ -50,6 +50,21 @@
             app:layout_constraintStart_toStartOf="@id/name_account"
             app:layout_constraintTop_toBottomOf="@id/name_account"
             />
+
+        <TextView
+            android:id="@+id/tv_item_published_date"
+            android:layout_width="379dp"
+            android:layout_height="25dp"
+            android:gravity="start"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tv_description"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_description"
+            app:layout_constraintTop_toBottomOf="@+id/tv_description"
+            app:layout_constraintVertical_bias="0.297"
+            tools:text="@string/published_date" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

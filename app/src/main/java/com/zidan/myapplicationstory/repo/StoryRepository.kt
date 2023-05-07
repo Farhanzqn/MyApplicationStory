@@ -25,7 +25,7 @@ import retrofit2.Response
 import java.io.File
 import javax.inject.Inject
 
-class StoryRepository @Inject constructor(
+class StoryRepository @Inject   constructor(
     private val apiService: ApiService,
     private val storyPagingSource: StoryPaging
 ) {
@@ -61,7 +61,7 @@ class StoryRepository @Inject constructor(
             ) {
                 val responseBody = response.body()
                 if (response.isSuccessful && responseBody != null) {
-                    _listStory.value = responseBody.listStory!!
+                    _listStory.value = responseBody.listStory
                 }
             }
 

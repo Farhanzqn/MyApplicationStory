@@ -70,8 +70,8 @@
             android:paddingVertical="5dp"
             />
 
-        <Button
-            android:id="@+id/btn_sign_in"
+        <com.zidan.myapplicationstory.custom.MyButton
+            android:id="@+id/btn_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/login"

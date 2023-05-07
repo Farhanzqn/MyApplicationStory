@@ -42,7 +42,7 @@ class RegisterActivity : AppCompatActivity() {
 
         userViewModel.snackbar.observe(this) {
             Snackbar.make(
-                binding.btnSignUp, it, Snackbar.LENGTH_SHORT
+                binding.btnRegister, it, Snackbar.LENGTH_SHORT
             ).show()
         }
 
@@ -67,12 +67,12 @@ class RegisterActivity : AppCompatActivity() {
 
     private fun setClick() {
         binding.apply {
-            btnSignUp.setOnClickListener {
+            btnRegister.setOnClickListener {
                 if (nameAccount.text.toString().length >= 2) {
                     if (android.util.Patterns.EMAIL_ADDRESS.matcher(emailAccount.text.toString())
                             .matches()
                     ) {
-                        if (passwordAccount.length() >= 6) {
+                        if (passwordAccount.length() >= 8) {
                             if (passwordAccount.text.toString().isNotEmpty()) doSignUp()
                             else showSnackbar(resources.getString(R.string.password_dont_match_alert))
                         }else showSnackbar(resources.getString(R.string.password_alert))
@@ -84,7 +84,7 @@ class RegisterActivity : AppCompatActivity() {
 
     private fun showSnackbar(isiString: String) {
         Snackbar.make(
-            binding.btnSignUp, isiString, Snackbar.LENGTH_SHORT
+            binding.btnRegister, isiString, Snackbar.LENGTH_SHORT
         ).show()
     }
 

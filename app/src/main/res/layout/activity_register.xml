@@ -21,6 +21,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="219dp"
+            android:layout_marginBottom="26dp"
+            android:src="@drawable/daftar" />
+
         <com.zidan.myapplicationstory.custom.MyEditText
             android:id="@+id/name_account"
             android:hint="@string/name"
@@ -65,8 +72,8 @@
             android:paddingVertical="5dp" />
 
 
-        <Button
-            android:id="@+id/btn_sign_up"
+        <com.zidan.myapplicationstory.custom.MyButton
+            android:id="@+id/btn_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="16dp"
