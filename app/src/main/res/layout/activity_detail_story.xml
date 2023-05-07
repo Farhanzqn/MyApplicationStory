@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".detail.DetailStoryActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:id="@+id/story_photo"
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:src="@drawable/baseline_people_alt_24"
+            android:contentDescription="@string/viewing_image"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            />
+
+        <TextView
+            android:id="@+id/name_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/name"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            android:transitionName="@string/name"
+            app:layout_constraintEnd_toEndOf="@id/story_photo"
+            app:layout_constraintStart_toStartOf="@id/story_photo"
+            app:layout_constraintTop_toBottomOf="@id/story_photo"
+            />
+
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/description"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="@id/name_account"
+            app:layout_constraintStart_toStartOf="@id/name_account"
+            app:layout_constraintTop_toBottomOf="@id/name_account"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

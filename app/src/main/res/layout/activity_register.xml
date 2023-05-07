@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    tools:context=".register.RegisterActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.zidan.myapplicationstory.custom.MyEditText
+            android:id="@+id/name_account"
+            android:hint="@string/name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="top"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg"
+            android:drawableStart="@drawable/baseline_people_alt_24"
+            android:drawablePadding="8dp"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="5dp" />
+
+
+        <com.zidan.myapplicationstory.custom.MyEmail
+            android:id="@+id/email_account"
+            android:hint="@string/email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg"
+            android:drawableStart="@drawable/baseline_email_24"
+            android:drawablePadding="8dp"
+            android:inputType="textEmailAddress"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="5dp" />
+
+        <com.zidan.myapplicationstory.custom.MyPassword
+            android:id="@+id/password_account"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg"
+            android:drawableStart="@drawable/baseline_password_24"
+            android:drawablePadding="8dp"
+            android:ems="10"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="5dp" />
+
+
+        <Button
+            android:id="@+id/btn_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="@string/register" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

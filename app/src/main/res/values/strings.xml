@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">MyApplicationStory</string>
+
+    <string name="name">Masukkin Nama Yuk!</string>
+    <string name="description">Description</string>
+    <string name="not_found">Sorry not found</string>
+    <string name="password">Masukkin Password Yuk!</string>
+    <string name="confirm_password">Confirm your password</string>
+    <string name="password_min">Password minimum 8 character</string>
+
+    <string name="email">Masukkan Email Yuk!</string>
+    <string name="language">Language</string>
+    <string name="logout">Log Out</string>
+    <string name="login">Login</string>
+
+    <string name="dont_have_a_account">Tidak punya akun?</string>
+    <string name="register">Daftar Yuk!</string>
+    <string name="password_dont_match_alert">Password tidak cocok</string>
+    <string name="name_alert">Nama minimal 2 karakter</string>
+    <string name="password_alert">PasswordPassword must have more 6 character</string>
+    <string name="confirmation">Konfirmasi</string>
+    <string name="invalid">Data yang dimasukkan tidak valid</string>
+    <string name="confirmation_desc">Apakah kamu ingin keluar?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="click_to_add_story">Klik untuk menambah story</string>
+    <string name="viewing_image">Lihat Gambar</string>
+    <string name="switching_camera">Ganti Kamera</string>
+    <string name="camera_x">Camera X</string>
+    <string name="email_invalid">Email invalid</string>
+    <string name="failed_take_a_photo">Gagal ngambil foto</string>
+
+    <string name="gallery">Gallery</string>
+    <string name="upload">Post</string>
+    <string name="add_story">Tambah Story</string>
+    <string name="failed_to_open_camera">Gagal membuka camera</string>
+    <string name="choose_a_image">Pilih gambar Yuk!!</string>
+    <string name="please_to_choose_image">Pilih gambar terlebih dahulu</string>
+    <string name="failed_instance">Gagal instance</string>
+    <string name="descerror">Mohon isi deskripsi</string>
+    <string name="dont_have_permission">Tidak mendapatkan akses</string>
+    <string name="placeholder_image">Gambar latar belakang</string>
+    <string name="coba_lagi">Coba lagi</string>
+    <string name="okee">Telah berhasil upload foto</string>
+    <string name="lokasi">lokasi</string>
+    <string name="parsing">Penguraian Gaya Gagal</string>
+    <string name="title_activity_maps">Peta</string>
+    <string name="failedstyle"> Tidak Dapat Menemukan Gaya</string>
+    <string name="errorparsing">Penguraian Kesalahan</string>
+    <string name="cantfind">Tidak dapat menemukan gaya. Kesalahan: </string>
+    <string name="poststory"> Story dari: </string>
+    <string name="location">Lokasi</string>
+    <string name="empty_location">Lokasi tidak ditemukan. Coba lagi!</string>
+    <string name="empty_address">Alamat tidak diketahui</string>
+    <string name="permission_denied">mohon izinkan dulu</string>
+</resources>
