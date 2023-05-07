@@ -7,8 +7,13 @@ import android.graphics.BitmapFactory
 import android.location.Geocoder
 import android.location.Location
 import android.net.Uri
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.Settings
+import android.view.Menu
+import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
@@ -20,10 +25,13 @@ import com.google.android.gms.maps.model.LatLng
 import com.zidan.myapplicationstory.R
 import com.zidan.myapplicationstory.camera.CameraActivity
 import com.zidan.myapplicationstory.databinding.ActivityStoryBinding
+import com.zidan.myapplicationstory.login.LoginActivity
 import com.zidan.myapplicationstory.main.MainActivity
 import com.zidan.myapplicationstory.main.UserViewModel
+import com.zidan.myapplicationstory.maps.MapsActivity
 import com.zidan.myapplicationstory.utils.reduceFileImage
 import com.zidan.myapplicationstory.utils.rotateBitmap
+import com.zidan.myapplicationstory.utils.rotateFile
 import com.zidan.myapplicationstory.utils.uriToFile
 import dagger.hilt.android.AndroidEntryPoint
 import java.io.File
@@ -37,6 +45,7 @@ class StoryActivity : AppCompatActivity() {
     private lateinit var fusedLocationClient: FusedLocationProviderClient
     private val userViewModel by viewModels<UserViewModel>()
     private val storyViewModel by viewModels<StoryViewModel>()
+    private var getFile: File? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -134,21 +143,24 @@ class StoryActivity : AppCompatActivity() {
         launcherIntentCameraX.launch(intent)
     }
 
-    private var getFile: File? = null
     private val launcherIntentCameraX = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()
     ) {
         if (it.resultCode == CAMERA_X_RESULT) {
-            val myFile = it.data?.getSerializableExtra("picture") as File
+            val myFile = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                it.data?.getSerializableExtra("picture", File::class.java)
+            } else {
+                @Suppress("DEPRECATION")
+                it.data?.getSerializableExtra("picture")
+            } as? File
+
             val isBackCamera = it.data?.getBooleanExtra("isBackCamera", true) as Boolean
 
-            getFile = myFile
-            val result = rotateBitmap(
-                BitmapFactory.decodeFile(getFile?.path),
-                isBackCamera
-            )
-
-            binding.viewImage.setImageBitmap(result)
+            myFile?.let { file ->
+                rotateFile(file, isBackCamera)
+                getFile = file
+                binding.viewImage.setImageBitmap(BitmapFactory.decodeFile(file.path))
+            }
         }
     }
 
@@ -200,7 +212,6 @@ class StoryActivity : AppCompatActivity() {
             )
         }
     }
-
 
 
     private fun allPermissionsGranted() = REQUIRED_PERMISSIONS.all {
